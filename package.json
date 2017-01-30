@@ -1,0 +1,17 @@
+{
+  "name": "web-technologies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "serve": "revealer --serve",
+    "build": "revealer --build"
+  },
+  "dependencies": {
+    "reveal.js": "^3.4.0",
+    "revealer": "^2.0.3"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
