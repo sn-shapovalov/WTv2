@@ -2,12 +2,52 @@
 <head>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="css/idea.css">
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
 
     <style>
+        .print-pdf .reveal ul li,
+        .print-pdf .reveal h2,
+        .print-pdf .reveal h3,
+        .print-pdf .reveal h4,
+        .print-pdf .reveal h5 {
+            font-size: 80%;
+            line-height: 120%;
+        }
+
+        .print-pdf .reveal h1 {
+            font-size: 100%;
+        }
+
+
         .reveal {
             font-size: 36px;
+        }
+
+        .reveal .slides {
+            width: 90% !important;
+        }
+
+        .reveal .slides > section {
+            padding: 0;
+        }
+
+        .reveal pre code {
+            max-height: 700px;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
+            text-transform: none;
+        }
+
+        div.flex {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        div.flex > div, div.flex > ul {
+            width: 50%;
         }
     </style>
 </head>
@@ -15,7 +55,7 @@
 <div class="reveal">
     <div class="slides">
 
-        <section data-markdown="lecture1.md"
+        <section data-markdown="lecture2-print.md"
                  data-separator="^\n\n\n"
                  data-separator-vertical="^\n\n"
                  data-separator-notes="^Note:">
@@ -31,7 +71,9 @@
             { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 
             // Syntax highlight for <code> elements
-            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+            { src: 'plugin/remote-control/remote.js', async: true }
         ]
     });
 
@@ -44,9 +86,6 @@
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     } else {
         Reveal.addEventListener('ready', function() {
-            document.querySelectorAll('h4, ul li').forEach(el => {
-                el.classList.add('fragment');
-            });
         });
     }
 
