@@ -99,7 +99,6 @@ function f1() {
 
     function f2() {
         var a = 'a2';
-
         console.log(a, b, c); // => a2, b1, c0
     }
 
@@ -541,3 +540,7 @@ let entries = [...myArray.entries()];
 // [[0, 1], [1, 'abc'], [2, true]];
 </code></pre>
 </div>
+
+
+
+### TODO: оператор delete
