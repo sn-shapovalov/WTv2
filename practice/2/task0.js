@@ -27,7 +27,7 @@ function runTask0() {
 	assertEqualArrays([0, 0, 0], getStats([0]), "Case #0");
 	assertEqualArrays([0, 0, 0], getStats([]), "Case #1");
 	assertEqualArrays([2, 2, 2], getStats([2, 2, 2]), "Case #2");
-	assertEqualArrays([98, 2, 42.4], getStats([3, 37, 45, 80, 1, 50, 36, 75, 77, 26]), "Case #3");
+	assertEqualArrays([80, 1, 43], getStats([3, 37, 45, 80, 1, 50, 36, 75, 77, 26]), "Case #3");
 	assertEqualArrays([86, 10, 47], getStats([86, 30, 70, 19, 68, 75, 10, 49, 26, 37]), "Case #4");
 	assertEqualArrays([46, -48, 5.15], getStats([1, 46, 29, 7, -24, -48, -5, -46, 5, 36, 43, 13, -32, -15, 21, 46, -23, 33, -10, 26]), "Case #5");
 	assertEqualArrays([50, -47, 12.75], getStats([7, 50, -3, 36, 21, -21, 18, 7, -3, 24, 25, 17, -16, 49, 17, 6, 33, 16, 19, -47]), "Case #6");
