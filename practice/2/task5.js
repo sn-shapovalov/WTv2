@@ -127,7 +127,7 @@ function runTask5() {
 	var emptyObject = {};
 	var result5 = mergeObjects([emptyObject, emptyObject, emptyObject, emptyObject, emptyObject, emptyObject, emptyObject]);
 
-	assertEqualObjects(result4, emptyObject, "Case #5");
+	assertEqualObjects(result5, emptyObject, "Case #5");
 
 	console.log("Done!");
 }
